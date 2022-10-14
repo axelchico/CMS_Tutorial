@@ -77,7 +77,7 @@ func hashPass(userPass string) string {
 }
 
 func databaseStart() {
-	client, err := mongo.NewClient(options.Client().ApplyURI("mongodb+srv://axelchico:XdFDThjmSLVwBPEo@cluster0.pmuf2ii.mongodb.net/?retryWrites=true&w=majority"))
+	client, err := mongo.NewClient(options.Client().ApplyURI(""))
 	if err != nil {
 		log.Fatal(err)
 	}
