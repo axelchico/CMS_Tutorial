@@ -1,0 +1,72 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Hashin Challenge</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="https://kit.fontawesome.com/6f5755350d.js" crossorigin="anonymous"></script>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <!-- Add your site or application content here -->
+  <form id="my-form">
+    <div class="form-box">
+        <h1>Login Here</h1>
+        <div class="input-box">
+          <i class="fa-solid fa-circle-user"></i>
+            Username: <input type="text" name="user"><br>
+        </div>
+        <div class="input-box">
+          <i class="fa-solid fa-key"></i>
+            Password: <input type="password" name="pwd" id="myInput"> <br>
+          <span class="eye" onclick="myFunction()">
+            <i id="hide1" class="fa-regular fa-eye"></i>
+            <i id="hide2" class="fa-regular fa-eye-slash"></i>
+          </span>
+        </div>
+        <input type="submit" class = "login-btn" value="Submit">        
+    </div>
+  </form>
+        <script>
+          function myFunction(){
+            var x = document.getElementById("myInput");
+            var y = document.getElementById("hide1");
+            var z = document.getElementById("hide2");
+
+            if(x.type === 'password'){
+              x.type = "text";
+              y.style.display = "block";
+              z.style.display = "none";
+            }
+            else{
+              x.type = "password";
+              y.style.display = "none";
+              z.style.display = "block";
+            }
+          }
+
+          function submitMe(){
+            var form = document.getElementById("my-form")
+            async function handleSubmit(event) {
+              event.preventDefault();
+              var data = new FormData(event.target);
+            }
+          }
+        </script>
+</body>
+
+</html>
